@@ -1,415 +1,153 @@
-*{
-  margin: 10;
-  padding: 20;
+:root {
+  --bg: #fffafc;
+  --primary: #7a2c57;
+  --secondary: #f6d5e5;
+  --text: #2b1b24;
+  --card: #ffffff;
+}
+
+* {
   box-sizing: border-box;
 }
+
 body {
-background-color: #b2f0e9;
-color: #333;
-font-family:'Times New Roman', Times, serif;
-margin: 0;
-padding: 10px;
-}
-/* Estilo para la clase mensaje */
-.mensaje {
-  background-color: white; /* Fondo suave en tonos rosados */
-  color: white; /* Color del texto en un tono cálido */
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px; /* Bordes redondeados */
-  font-size: 1.3em;
-  font-style: italic; /* Estilo en cursiva para darle un toque suave */
-  text-align: center;
-  max-width: 80%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-/* Efecto hover para cuando el mouse pasa sobre el mensaje */
-.mensaje:hover {
-  background-color: white; /* Cambio de color cuando se pasa el mouse */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
-}
-/* Estilo para los enlaces que actuaran como botones */
-.boton-enlace {
-  display: block; /* Cambiado a block para que cada enlace ocupe una línea completa */
-  padding: 12px 20px; /* Espaciado alrededor del texto */
-  background-color: #034d52; /* Color de fondo cálido */
-  color: white; /* Color del texto blanco */
-  text-align: center; /* Centra el texto dentro del botón */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-  font-size: 1.1em; /* Un tamaño de texto adecuado */
-  border-radius: 8px; /* Bordes redondeados */
-  margin: 10px 0; /* Espaciado superior e inferior */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave al pasar el ratón */
+.hero {
+  padding: 1.5rem 2rem 3rem;
+  background: linear-gradient(160deg, #fff1f7 0%, #ffe6f2 100%);
 }
 
-/* Efecto cuando el mouse pasa sobre el botón */
-.boton-enlace:hover {
-  background-color: #034d52; /* Fondo más claro al pasar el ratón */
-  transform: translateY(-3px); /* Efecto de elevación para que parezca que se presiona */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-ul.hola {
-  list-style-type: none; /* Elimina los puntos de la lista */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
   padding: 0;
   margin: 0;
-  font-size: 18px; /* Tamaño de fuente agradable */
-  color: black; /* Color del texto a negro */
-  background-color: white; /* Fondo blanco */
-  border-radius: 15px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
-  width: 80%; /* Ancho controlado */
-  margin: 20px auto; /* Centrado horizontal y espaciado superior/inferior */
 }
 
-ul.hola li {
-  margin-bottom: 12px; /* Espaciado entre los elementos de la lista */
-  font-family: 'Arial', sans-serif; /* Tipografía sencilla y elegante */
-  padding-left: 20px; /* Espaciado a la izquierda */
-  position: relative;
-}
-
-ul.hola li:before {
-  content: "❤"; /* Añade un corazón antes de cada ítem */
-  color: #ff6f61; /* Color rojo para el corazón */
-  position: absolute;
-  left: 0; /* Coloca el corazón a la izquierda */
-  top: 0;
-}
-
-ul.hola p {
-  color: black; /* Color de texto para el párrafo */
-  font-size: 20px; /* Tamaño más grande para el párrafo */
-  margin-top: 15px; /* Espaciado superior para el párrafo */
-  text-align: center; /* Centra el párrafo */
-}
-
-strong {
-  font-size: 24px; /* Tamaño de fuente más grande para el título */
-  color: black; /* Color negro para el título */
-  text-align: center; /* Centra el título */
-  display: block;
-  margin-bottom: 20px; /* Espaciado inferior */
-  font-family: 'Georgia', serif; /* Tipografía elegante para el título */
-}
-
-ol {
-  font-size: 18px; /* Tamaño de fuente agradable */
-  color: black; /* Color de texto negro */
-  background-color: white; /* Fondo blanco */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 15px; /* Bordes redondeados */
-  margin: 20px auto; /* Centrado horizontal */
-  width: 80%; /* Control del ancho */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  list-style-type: none; /* Quitar números */
-}
-
-ol li {
-  margin-bottom: 12px; /* Espaciado entre los elementos */
-  font-family: 'Arial', sans-serif; /* Tipografía elegante */
-  padding-left: 20px; /* Espaciado a la izquierda */
-  position: relative;
-}
-
-ol li:before {
-  content: "☆"; /* Añade una estrella antes de cada ítem */
-  color: #ff6f61; /* Color rojo para la estrella */
-  position: absolute;
-  left: 0; /* Coloca la estrella a la izquierda */
-  top: 0;
-}
-
-dt {
-  font-size: 24px; /* Tamaño grande para el título */
-  color: #333; /* Color oscuro para el título */
-  font-family: 'Georgia', serif; /* Tipografía serif elegante */
-  text-align: center; /* Centrado del título */
-  text-decoration: underline; /* Subrayado */
-  font-weight: bold; /* Negrita */
-  margin-bottom: 15px; /* Espaciado debajo del título */
-}
-
-dd {
-  font-size: 18px; /* Tamaño de fuente más pequeño para el contenido */
-  color: #555; /* Color gris suave para el texto */
-  font-family: 'Arial', sans-serif; /* Tipografía más ligera y fácil de leer */
-  line-height: 1.8; /* Interlineado para mejorar la lectura */
-  text-align: justify; /* Alineación justificada */
-  margin: 0 20px; /* Márgenes a los lados */
-  padding-left: 20px; /* Espaciado interno a la izquierda */
-  padding-right: 20px; /* Espaciado interno a la derecha */
-}
-
-dd br {
-  margin-bottom: 10px; /* Espaciado entre los saltos de línea */
-}
-
-dd p {
-  margin: 20px 0; /* Margen adicional entre párrafos */
-  font-style: italic; /* Cursiva para las líneas importantes */
-}
-
-dl {
-  background-color: #f9f9f9; /* Fondo suave */
-  border: 1px solid #ddd; /* Borde sutil */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  width: 80%; /* Controlar el ancho */
-  margin: 0 auto 20px; /* Centrado y espaciado inferior */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-}
-.video-container {
-  width: 80%; /* Puedes ajustar el ancho del contenedor */
-  margin: 0 auto; /* Centrado horizontal */
-  text-align: center; /* Centrado del texto dentro del contenedor */
-  padding: 20px; /* Espaciado interno */
-}
-
-video {
-  width: 100%; /* Hace que el video ocupe todo el ancho del contenedor */
-  max-width: 600px; /* Establece el ancho máximo del video */
-  margin: 0 auto; /* Centrado del video */
-  display: block; /* Elimina cualquier espacio no deseado */
-}
-
-
-.encabezado {
-background-color: #87e0d1;
-padding: 20px;
-text-align: center;
-border-radius: 0 0 15px 15px;
-}
-
-h1, h3, h4 {
-color: #05676e;
-text-align: center;
-}
-
-.Menu {
-list-style: none;
-padding: 0;
-text-align: center;
-}
-
-.Menu li {
-display: inline;
-margin: 0 15px;
-}
-
-.Menu a {
-text-decoration: none;
-color: #034d52;
-font-weight: bold;
-}
-
-.Menu a:hover {
-color: #021f21;
-}
-
-.contenedor {
-max-width: 800px;
-margin: auto;
-padding: 20px;
-text-align: center;
-}
-/* Contenedor de las imágenes */
-.images-container {
-  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-  justify-content: center; /* Centra las imágenes en el eje horizontal */
-  align-items: center; /* Alinea las imágenes en el eje vertical */
-}
-
-/* Estilo de la primera imagen */
-img.Logo {
-  width: 250px;
-  margin-right: 20px; /* Agrega un pequeño espacio entre las imágenes */
-}
-
-/* Estilo de la segunda imagen */
-img.Logo2 {
-  width: 250px;
-  margin-left: 20px; /* Agrega un pequeño espacio entre las imágenes */
-}
-
-img.Logo3 {
-  width: 300px;
-  margin: 20px auto; /* Centra la imagen y agrega un margen superior de 15px */
-  display: block; /* Hace que la imagen se comporte como un bloque */
-}
-
-.tarjetas {
-display: flex;
-justify-content: space-around;
-flex-wrap: wrap;
-}
-
-.tarjeta {
-background: #e0faf6;
-padding: 15px;
-border-radius: 10px;
-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-width: 30%;
-margin: 10px;
-}
-
-.tarjeta h3 {
-color: #05676e;
-}
-
-table {
-width: 80%;
-margin: 20px auto;
-border-collapse: collapse;
-background: #e0faf6;
-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-border-radius: 10px;
-overflow: hidden;
-}
-
-thead {
-background: #87e0d1;
-color: white;
-}
-
-thead th, tbody td {
-padding: 10px;
-text-align: center;
-}
-
-tbody tr:nth-child(even) {
-background: #c1f7f0;
-}
-
-tbody tr:hover {
-background: #87e0d1;
-transition: 0.3s;
-}
-#valentinBtn {
-  display: block; /* Hace que el botón se comporte como un bloque */
-  margin: 20px auto; /* Centra el botón horizontalmente y le da un margen arriba y abajo */
-  padding: 10px 20px; /* Espaciado interno para el botón */
-  font-size: 16px; /* Tamaño de fuente */
-  background-color: #ff6f61; /* Color de fondo */
-  color: white; /* Color del texto */
-  border: none; /* Sin bordes */
-  border-radius: 10px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
-  transition: background-color 0.3s ease; /* Efecto de transición en el color de fondo */
-}
-
-#valentinBtn:hover {
-  background-color: #ff3b2f; /* Cambia el color de fondo cuando se pasa el cursor */
-}
-
-p{
-  text-align: center;
-  color: #021f21;
-}
-h3.h{
-  color: #021f21;
-  text-align: center;
-}
-h2.h{
-  color: #021f21;
-  text-align: center;
-  
-}
-h1.Ne{
-  color:#021f21 ;
-  text-align: center;
-}
-h3.Ne{
-  color:#021f21 ;
-  text-align: center;
-}
-.boton-bonito {
-  display: inline-block;
-  background-color: #3bd3b2e0;
-  color: white;
-  font-size: 12px; /* Tamaño de texto más pequeño */
-  font-weight: bold;
+.nav a {
   text-decoration: none;
-  padding: 10px 15px; /* Padding más pequeño */
-  border-radius: 8px; /* Bordes redondeados, ajusta si quieres más o menos */
-  transition: all 0.3s ease;
-  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
-  width: 120px; /* Ancho fijo para hacer el botón más pequeño */
-  height: 40px; /* Altura fija */
-  text-align: center; /* Alineación centrada del texto */
-  line-height: 40px; /* Centra el texto verticalmente */
-  margin: 0 auto; /* Asegura que esté centrado horizontalmente */
-  display: block; /* Para que se pueda centrar con margin: 0 auto */
+  color: var(--primary);
+  font-weight: 600;
 }
 
-.boton-bonito:hover {
-  background-color: #3bd3b2;
-  transform: scale(1.1);
+.brand {
+  font-weight: 700;
+  color: var(--primary);
 }
 
-.boton-bonito:active {
-  transform: scale(1);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+.hero-content {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
 }
 
+.tag {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
 
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0.6rem 0;
+  color: var(--primary);
+}
 
-/* Centrar el contenedor del botón */
-.contenedor-boton {
+.subtitle {
+  max-width: 40ch;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-image {
+  width: min(360px, 100%);
+  border-radius: 1rem;
+  justify-self: center;
+  box-shadow: 0 8px 30px rgba(122, 44, 87, 0.2);
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section h2 {
+  color: var(--primary);
+}
+
+.alt {
+  background: #fff;
+  border-top: 1px solid #f0dbe7;
+  border-bottom: 1px solid #f0dbe7;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #f1dce8;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.04);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+footer {
   text-align: center;
+  padding: 2.5rem 1rem 3rem;
+  background: #26131f;
+  color: #fceaf2;
 }
 
-.mensaje {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 30px auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.mensaje p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.mensaje strong {
-  font-weight: bold;
-}
-
-.mensaje u {
-  text-decoration: underline;
-}
-
-.mensaje em {
-  font-style: italic;
-}
-
-.mensaje span {
-  color: #ff7b7b;
-}
-
-
-@media (max-width: 768px) {
-.Menu li {
-    display: block;
-    margin: 10px 0;
-}
-
-.tarjetas {
-    flex-direction: column;
-    align-items: center;
-}
-
-.tarjeta {
-    width: 80%;
-}
-
-table {
-    width: 100%;
-}
+footer a {
+  color: #ffd7ea;
 }
